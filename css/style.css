@@ -1,0 +1,178 @@
+html {
+  /* no jump on scrollbar */
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+html, body {
+   min-height: 100%;
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 1em;
+   margin: 0;
+   background-color: #fdf9f4;
+  }
+
+.content {
+   display: grid;
+   grid-template-columns: 100%;
+   grid-template-rows: 500px 3fr .3fr;
+   grid-template-areas:
+      "header"
+      "content"
+      "footer";
+}
+
+.background-image {
+   grid-area: header;
+   margin: 0;
+   background-image: url("../images/bkgr.jpg");
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+   background-size: cover;
+   height: 479px;
+}
+
+#logo {
+   margin: 0 auto;
+   padding: 180px 0 0 0;
+   width: 150px;
+   position: center;
+   left: 50%;
+}
+
+.menu {
+   grid-area: header;
+   position: relative;
+   top: 17%;
+}
+
+.menu ul {
+   text-align: center;
+   margin: 0;
+   padding: 0;
+}
+
+.menu ul > li {
+   list-style: none;
+   display: inline;
+}
+
+.menu li a:link {
+   font-size: 0.8em;
+   color: #fdf9f4;
+   text-decoration: none;
+   padding-bottom: 2px;
+   border-bottom: 1px dashed transparent;
+}
+
+.menu li a:visited {
+  color: rgb(253, 249, 244);
+}
+
+.menu li a:hover {
+  color: #fff;
+  border-bottom-color: #fff;
+  transition: .8s;
+}
+
+.active {
+  padding-bottom: 1px;
+  border-bottom: 1px solid #fdf9f4;
+}
+
+#middle {
+  margin: 0 40px;
+}
+
+article {
+  grid-area: content;
+  position: static;
+  color: #3a332f;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+article h1 {
+  grid-area: content;
+  font-size: 1.2em;
+  font-weight: normal;
+  padding: 30px 0 15px 0;
+  margin: 0 auto;
+  margin-bottom: 2em;
+  border-bottom: 1px dashed #3a332f;
+  width: 150px;  
+}
+
+article p {
+  font-size: 0.8em;
+  padding: 0 0 .5em 0;
+}
+
+article a:link {
+  text-decoration: none;
+  color: #3a332f;
+  padding-bottom: 2px;
+  border-bottom: 1px dashed #3a332f;
+}
+
+article a:visited {
+  color: #3a332f;
+}
+
+article a:hover {
+  text-decoration: none;
+  transition: .5s;
+  color: #c54c06;
+  padding-bottom: 2px;
+  border-bottom: 1px dashed #3a332f;
+}
+
+.album {
+  padding-bottom: 1em;
+  margin-bottom: 50px;
+  border-bottom: .5px dashed #ccc1ba;
+}
+
+.album-cover {
+  margin: 0 auto;
+  padding: 5px 0 15px 0;
+  width: 200px;
+  height: 200px;
+}
+
+.album-cover img {
+  border-radius: 4px;
+}
+
+#title {
+  font-size: 1em;
+  line-height: 2em;
+}
+
+.album-links {
+  list-style-type: none;
+  padding: 10px 0 20px 0;
+  font-size: .9em;
+}
+
+.album-links li {
+  padding: 5px 0 5px 0;
+}
+
+#skull {
+  fill: #3a332f;
+   width: 25px;
+   margin: 0 auto;
+   padding: 2em 0;
+}
+
+footer {
+   grid-area: footer;
+   position: relative;
+   background-color: transparent;
+   color: #3a332f;
+   width: 100%;
+   text-align: center;
+   padding-bottom: 15px;
+}
