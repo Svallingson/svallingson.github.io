@@ -207,6 +207,7 @@ article a:hover {
   padding: 5px 0 15px 0;
   width: 200px;
   height: 200px;
+  filter: drop-shadow(2px 2px 5px #222);
 }
 
 .album-cover img {
